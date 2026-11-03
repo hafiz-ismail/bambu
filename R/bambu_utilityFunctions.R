@@ -186,6 +186,7 @@ handleWarnings <- function(readClassList, verbose){
     sampleNames = c()
     for(i in seq_along(readClassList)){
         readClassSe = readClassList[[i]]
+        dbg("handleWarnings: file ", i, " ", dbgName(readClassSe))
         if (is.character(readClassSe)){
             readClassSe <- readRDS(file = readClassSe)}
         warnings[[i]] = NA

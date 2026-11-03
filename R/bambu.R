@@ -171,6 +171,7 @@ bambu <- function(reads, annotations = NULL, genome = NULL, NDR = NULL,
             isoreParameters, trackReads = trackReads, fusionMode = fusionMode, 
             lowMemory = lowMemory)
     }
+    dbg("handleWarnings: start")
     warnings = handleWarnings(readClassList, verbose)
     if (!discovery & !quant) return(readClassList)
     if (discovery) {
